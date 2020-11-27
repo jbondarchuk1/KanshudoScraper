@@ -24,8 +24,8 @@ scope = ["https://spreadsheets.google.com/feeds","https://www.googleapis.com/aut
 creds = ServiceAccountCredentials.from_json_keyfile_name("./creds.json", scope)
 client = gspread.authorize(creds)
 # for troubleshooting, use the tutorial sheet
-# sheet = client.open("tutorial").get_worksheet(1)
-sheet = client.open("Japanese_Study").get_worksheet(1)
+sheet = client.open("tutorial").get_worksheet(1)
+# sheet = client.open("Japanese_Study").get_worksheet(1)
 data = sheet.get_all_records()
 
 insert_to_spreadsheet(words_for_excel)
