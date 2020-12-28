@@ -48,8 +48,8 @@ class kanshudo_scraper:
             login_button = driver.find_element_by_name("commit")
 
             # to make this program for other people just make a ui that inputs email and password and saves it
-            email_form.send_keys(input("Email: "))
-            password_form.send_keys(input("Password: "))
+            email_form.send_keys(input("Email: ")) # input("Email: ")
+            password_form.send_keys(input("Password: ")) # input("Password: ")
             login_button.click()
 
         else:

@@ -21,7 +21,7 @@ def insert_to_spreadsheet(my_data):
 
 # global variables***
 scope = ["https://spreadsheets.google.com/feeds","https://www.googleapis.com/auth/spreadsheets","https://www.googleapis.com/auth/drive.file","https://www.googleapis.com/auth/drive"]
-creds = ServiceAccountCredentials.from_json_keyfile_name("./creds.json", scope)
+creds = ServiceAccountCredentials.from_json_keyfile_name("python_nihongo\creds.json", scope)
 client = gspread.authorize(creds)
 # for troubleshooting, use the tutorial sheet
 sheet = client.open("tutorial").get_worksheet(1)
